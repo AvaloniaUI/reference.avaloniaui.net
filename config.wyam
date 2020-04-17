@@ -4,4 +4,36 @@
 Settings[Keys.Host] = "avaloniaui.net";
 Settings[DocsKeys.Title] = "Avalonia UI Framework";
 
+// Source files
+var exclude = new[]
+{
+    "bin",
+    "obj",
+    "Avalonia.Android",
+    "Avalonia.AndroidTestApplication",
+    "Avalonia.Build.Tasks",
+    "Avalonia.Designer.HostApp",
+    "Avalonia.DesignerSupport",
+    "Avalonia.Diagnostics/ViewModels",
+    "Avalonia.Diagnostics/Views",
+    "Avalonia.Direct2D1",
+    "Avalonia.FreeDesktop",
+    "Avalonia.iOS",
+    "Avalonia.iOSTestApplication",
+    "Avalonia.LinuxFrameBuffer",
+    "Avalonia.Native",
+    "Avalonia.OpenGL",
+    "Avalonia.Remote.Protocol",
+    "Avalonia.Skia",
+    "Avalonia.Win32",
+    "Avalonia.Win32.Interop",
+    "Avalonia.X11"
+};
+
+var sourceFiles = "../src/avalonia/src";
+var excludeGlob = "{" + string.Join(",", exclude.Select(x => "!" + x)) + ",}";
+
+Settings[DocsKeys.SourceFiles] = $"{sourceFiles}/**/{excludeGlob}/**/*.cs";
+Console.WriteLine(Settings[DocsKeys.SourceFiles]);
+
 // Add any pipeline customizations here
