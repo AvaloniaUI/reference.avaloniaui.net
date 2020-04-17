@@ -3,6 +3,7 @@
 // Customize your settings and add new ones here
 Settings[Keys.Host] = "avaloniaui.net";
 Settings[DocsKeys.Title] = "Avalonia UI Framework";
+Settings[DocsKeys.Logo] = "assets/img/logo.png";
 
 // Source files
 var exclude = new[]
