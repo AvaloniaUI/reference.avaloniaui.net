@@ -1,0 +1,7 @@
+#recipe Docs
+
+// Customize your settings and add new ones here
+Settings[Keys.Host] = "avaloniaui.net";
+Settings[DocsKeys.Title] = "Avalonia UI Framework";
+
+// Add any pipeline customizations here
