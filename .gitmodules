@@ -1,0 +1,3 @@
+[submodule "src/avalonia"]
+	path = src/avalonia
+	url = https://github.com/AvaloniaUI/Avalonia
