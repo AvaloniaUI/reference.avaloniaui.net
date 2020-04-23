@@ -1,9 +1,10 @@
 #recipe Docs
 
 // Customize your settings and add new ones here
-Settings[Keys.Host] = "avaloniaui.net";
-Settings[DocsKeys.Title] = "Avalonia UI Framework";
+Settings[Keys.Host] = "reference.avaloniaui.net";
+Settings[DocsKeys.IncludeGlobalNamespace] = false;
 Settings[DocsKeys.Logo] = "assets/img/logo.png";
+Settings[DocsKeys.Title] = "Avalonia UI Framework";
 
 // Source files
 var exclude = new[]
@@ -35,6 +36,10 @@ var sourceFiles = "../src/avalonia/src";
 var excludeGlob = "{" + string.Join(",", exclude.Select(x => "!" + x)) + ",}";
 
 Settings[DocsKeys.SourceFiles] = $"{sourceFiles}/**/{excludeGlob}/**/*.cs";
+
+// DEBUG
+Settings[DocsKeys.SourceFiles] = $"{sourceFiles}/Avalonia.Interactivity/*.cs";
+
 Console.WriteLine(Settings[DocsKeys.SourceFiles]);
 
 // Add any pipeline customizations here
