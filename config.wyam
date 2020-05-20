@@ -36,10 +36,3 @@ var sourceFiles = "../src/avalonia/src";
 var excludeGlob = "{" + string.Join(",", exclude.Select(x => "!" + x)) + ",}";
 
 Settings[DocsKeys.SourceFiles] = $"{sourceFiles}/**/{excludeGlob}/**/*.cs";
-
-// DEBUG
-Settings[DocsKeys.SourceFiles] = $"{sourceFiles}/Avalonia.Interactivity/*.cs";
-
-Console.WriteLine(Settings[DocsKeys.SourceFiles]);
-
-// Add any pipeline customizations here
