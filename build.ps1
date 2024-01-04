@@ -13,4 +13,4 @@ foreach ($package in $packages)
 	}
 }
 
-docfx 
+docfx metadata --outputFormat markdown

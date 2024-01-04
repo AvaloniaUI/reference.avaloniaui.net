@@ -1,0 +1,7 @@
+apiRules:
+- exclude:
+    hasAttribute:
+      uid: Avalonia.Metadata.PrivateApiAttribute
+- exclude:
+    hasAttribute:
+      uid: Avalonia.Metadata.UnstableAttribute
