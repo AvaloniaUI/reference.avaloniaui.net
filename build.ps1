@@ -1,5 +1,5 @@
 $version=11.0.6
-$packages=@('Avalonia', 'Avalonia.Desktop')
+$packages=@('Avalonia')
 
 mkdir -Force packages
 
@@ -12,3 +12,5 @@ foreach ($package in $packages)
 		Expand-Archive -DestinationPath packages/$package packages/$package.zip
 	}
 }
+
+docfx 
